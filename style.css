@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #131417;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+}
+
+.container.view1 {
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.container.view2 {
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.coder {
+  display: grid;
+  padding: 10px;
+}
+
+.coder.view1 {
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.coder.view2 {
+  height: 100vh;
+  width: 100%;
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.code-editor {
+  height: 100%;
+  width: 100%;
+}
+
+.code {
+  background-color: #1d1e22;
+  height: 100%;
+  width: 100%;
+}
+.code-type {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  height: fit-content;
+  width: 100%;
+  background-color: #1a1b1f;
+  padding: 10px;
+  border-bottom: 1px solid #131417;
+}
+
+.ace_gutter {
+  background-color: #1d1e22 !important;
+}
+
+.ace_gutter-cell.ace_gutter-active-line.ace_info {
+  background-color: #1d1e22 !important;
+}
+
+.ace-nord-dark .ace_gutter-active-line {
+  background-color: #1d1e22 !important;
+}
+
+.output {
+  background-color: #1d1e22;
+}
+
+.virtual-iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.change-layout {
+  position: absolute;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 7px;
+  background-color: #444857;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  padding: 10px 20px;
+  margin: auto;
+  bottom: 15px;
+  left: 15px;
+  cursor: pointer;
+  z-index: 20;
+  user-select: none;
+}
+
+.change-layout:hover {
+  background-color: #2d303a;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat", sans-serif;
+}
+
+.sidebar {
+  width: 3rem;
+  height: 100%;
+  background-color: #eee;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.menu-icon {
+  margin-top: 3rem;
+  cursor: pointer;
+}
+.line {
+  height: 0.2rem;
+  width: 2.5rem;
+  background-color: #222;
+  margin-bottom: 0.6rem;
+  transition: width 0.3s;
+}
+.line-1,
+.line-3 {
+  width: 1.8rem;
+}
+.menu-icon:hover .line {
+  width: 2.5rem;
+}
+.social-icons-list {
+  list-style: none;
+  padding: 0;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.social-list {
+  font-size: 2rem;
+  color: #777;
+  transition: color 0.3s;
+}
+.social-list:hover {
+  color: #deaa86;
+}
+.year {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.navigation {
+  position: fixed;
+  margin-left: -50px;
+  left: -32rem;
+  width: 20rem;
+  height: 100%;
+  background-color: #1e1f25;
+  transition: left 0.5s;
+}
+
+
+/* CSS */
+.navigation a {
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(rgba(153, 31, 209, 0.84), rgba(57, 31, 91, .84) 50%);
+  border-radius: 20px;
+  border-width: 0;
+  /* box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px,rgba(156, 63, 199, 0.4) 0 8px 12px; */
+  color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  font-family: Quicksand,sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  justify-content: center;
+  letter-spacing: .04em;
+  line-height: 16px;
+  margin: 10px 0px ;
+  width: 150px;
+  padding: 12px 12px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,rgba(255, 255, 255, 0.2) 0 0 12px,rgba(57, 31, 91, 0.6) 1px 1px 4px,rgba(57, 31, 91, 0.32) 4px 4px 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+}
+
+.button-72:hover {
+  background-image: linear-gradient(#B384C9, #391F5B 50%);
+}
+
+@media (min-width: 768px) {
+  .button-72 {
+    font-size: 21px;
+    padding: 18px 34px;
+  }
+}
+.checkbox:checked ~ .navigation {
+  left: 8rem;
+}
+
+.checkbox {
+  display: none;
+}
+.navigation-item {
+  margin-left: 30px;
+  font-size: large;
+}
+.log {
+  text-align: end;
+  margin-right: 10px;
+  margin-left: 1000px;
+}
